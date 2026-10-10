@@ -19,10 +19,14 @@ const skills = {
       nama: "JavaScript",
       icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
     },
-    { nama: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+    { nama: "React", 
+      icon: "https://cdn.simpleicons.org/react/61DAFB" 
+    },
+    { nama: "Tailwind", 
+      icon: "https://cdn.simpleicons.org/tailwindcss/38BDF8" 
+    },
   ],
   backend: [
-    { nama: "PHP", icon: "https://cdn.simpleicons.org/php/777BB4" },
     { nama: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
   ],
   tools: [
@@ -31,6 +35,10 @@ const skills = {
     {
       nama: "VSCode",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    },
+    {
+      nama: "npm",
+      icon: "https://cdn.simpleicons.org/npm/CB3837",
     },
   ],
 };
@@ -43,22 +51,24 @@ const categories = [
 
 const SkillSection = () => {
   return (
-    <div className="skills-section">
-      <div className="text-skills">
-        <PText text="WHAT I WORK WITH" />
-        <H1Text text="My" span="Skills" fontWeight="lighter" big="big" />
+    <div className="skills-section w-[90%] mx-auto my-40 max-md:w-[95%] max-md:my-24">
+      <div className="text-skills flex flex-col gap-1 text-center">
+        <PText text="TECH STACK" aos="fade-up"/>
+        <H1Text text="My " span="Skills" fontWeight="lighter" big="big" aos="fade-up"/>
         <Description
-          text={"Technologies and tools I use to build interactive experiences"}
+          text={"The technologies and tools I use to turn ideas into functional web experiences."}
+          className="mt-6 mb-28 text-putih/70 max-md:mt-8 max-md:mb-16"
+          aos="fade-up"
         />
       </div>
       {categories.map((cat) => {
         return (
           <div> 
-            <div data-aos="fade-right" data-aos-duration={1000 + 100 * cat}>
+            <div data-aos="fade-up" data-aos-duration={1000 + 100 * cat}>
             <SectionLine text={cat.label} />
             </div>
             <br />
-            <div className="skills-grid">
+            <div className="skills-grid flex flex-wrap gap-[0.6rem] justify-center">
               {cat.items.map((item) => {
                 return (
                   <div

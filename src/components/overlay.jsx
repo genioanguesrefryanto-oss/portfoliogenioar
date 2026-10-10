@@ -1,6 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
 import { Renderer, Program, Triangle, Mesh } from 'ogl';
-import './comps.css';
 
 const hexToRgb = hex => {
   const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -18,10 +17,8 @@ const originToFlip = origin => {
 
 const SideRays = ({
   speed = 2.5,
-  rayColor1 = '#c9a227',
-  rayColor2 = '#7a5b12',
-  // rayColor1 = '#0850ea',
-  // rayColor2 = '#96c8ff',
+  rayColor1 = '#0850ea',
+  rayColor2 = '#96c8ff',
   intensity = 1.4,
   spread = 2,
   origin = 'top-right',
@@ -254,7 +251,7 @@ void main() {
     u.iOpacity.value = opacity;
   }, [speed, rayColor1, rayColor2, intensity, spread, origin, tilt, saturation, blend, falloff, opacity]);
 
-  return <div ref={containerRef} className={`side-rays-container ${className}`.trim()} />;
+  return <div ref={containerRef} className={`side-rays-container relative w-full h-full overflow-hidden z-[3] pointer-events-none ${className}`.trim()} />;
 };
 
 export default SideRays;

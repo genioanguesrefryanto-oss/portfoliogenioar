@@ -1,6 +1,5 @@
 import { motion, useMotionValue, useTransform } from "motion/react";
 import { useState, useEffect } from "react";
-import "./comps.css";
 
 function CardRotate({
   children,
@@ -27,7 +26,7 @@ function CardRotate({
 
   if (disableDrag) {
     return (
-      <motion.div className="card-rotate-disabled" style={{ x: 0, y: 0 }}>
+      <motion.div className="card-rotate-disabled absolute w-full h-full cursor-pointer" style={{ x: 0, y: 0 }}>
         {children}
       </motion.div>
     );
@@ -35,7 +34,7 @@ function CardRotate({
 
   return (
     <motion.div
-      className="card-rotate"
+      className="card-rotate absolute w-full h-full cursor-grab"
       style={{ x, y, rotateX, rotateY }}
       drag
       dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
@@ -87,7 +86,7 @@ export default function Stack({
             <img
               src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=500&auto=format"
               alt="card-1"
-              className="card-image"
+              className="card-image w-full h-full object-cover pointer-events-none select-none"
             />
           ),
         },
@@ -97,7 +96,7 @@ export default function Stack({
             <img
               src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=500&auto=format"
               alt="card-2"
-              className="card-image"
+              className="card-image w-full h-full object-cover pointer-events-none select-none"
             />
           ),
         },
@@ -107,7 +106,7 @@ export default function Stack({
             <img
               src="https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&w=500&auto=format"
               alt="card-3"
-              className="card-image"
+              className="card-image w-full h-full object-cover pointer-events-none select-none"
             />
           ),
         },
@@ -117,7 +116,7 @@ export default function Stack({
             <img
               src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=500&auto=format"
               alt="card-4"
-              className="card-image"
+              className="card-image w-full h-full object-cover pointer-events-none select-none"
             />
           ),
         },
@@ -154,7 +153,7 @@ export default function Stack({
 
   return (
     <div
-      className="stack-container"
+      className="stack-container relative w-full h-full [perspective:600px]"
       onMouseEnter={() => pauseOnHover && setIsPaused(true)}
       onMouseLeave={() => pauseOnHover && setIsPaused(false)}
     >
@@ -168,7 +167,7 @@ export default function Stack({
             disableDrag={shouldDisableDrag}
           >
             <motion.div
-              className="card"
+              className="card rounded-2xl overflow-hidden w-full h-full flex items-center justify-center"
               onClick={() => shouldEnableClick && sendToBack(card.id)}
               animate={{
                 rotateZ: (stack.length - index - 1) * 4 + randomRotate,

@@ -1,5 +1,4 @@
 import React from "react";
-import './comps.css'
 const ProjectBtn = ({ text }) => {
   return (
     <div>

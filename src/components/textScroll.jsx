@@ -2,8 +2,6 @@ import { useEffect, useRef, useMemo } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import './comps.css';
-
 gsap.registerPlugin(ScrollTrigger);
 
 const ScrollReveal = ({
@@ -25,7 +23,7 @@ const ScrollReveal = ({
     return text.split(/(\s+)/).map((word, index) => {
       if (word.match(/^\s+$/)) return word;
       return (
-        <span className="word" key={index}>
+        <span className="word inline-block" key={index}>
           {word}
         </span>
       );
@@ -98,8 +96,8 @@ const ScrollReveal = ({
   }, [scrollContainerRef, enableBlur, baseRotation, baseOpacity, rotationEnd, wordAnimationEnd, blurStrength]);
 
   return (
-    <h2 ref={containerRef} className={`scroll-reveal ${containerClassName}`}>
-      <p className={`scroll-reveal-text ${textClassName}`}>{splitText}</p>
+    <h2 ref={containerRef} className={`scroll-reveal my-5 ${containerClassName}`}>
+      <p className={`scroll-reveal-text text-[clamp(1.6rem,4vw,3rem)] leading-[1.5] font-light tracking-[0.5rem] text-putih ${textClassName}`}>{splitText}</p>
     </h2>
   );
 };

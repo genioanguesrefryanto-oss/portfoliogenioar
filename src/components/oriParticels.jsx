@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Renderer, Camera, Geometry, Program, Mesh } from 'ogl';
 
-import './comps.css';
-
 const defaultColors = ['#ffffff', '#ffffff', '#ffffff'];
 
 const hexToRgb = hex => {
@@ -238,7 +236,7 @@ const Particles = ({
     pixelRatio
   ]);
 
-  return <div ref={containerRef} className={`particles-container ${className}`} />;
+  return <div ref={containerRef} className={`particles-container relative w-full h-full ${className}`} />;
 };
 
 export default Particles;
