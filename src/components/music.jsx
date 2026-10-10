@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import song from "../music/Mariah Carey - Obsessed (Lyrics) [IIS3HTulPyM].mp3";
-
+import song1 from "../music/Adele - Send My Love (To Your New Lover).mp3";
 const DOTS = Array.from({ length: 8 }, (_, i) => ({
   id: i,
   left: `${10 + Math.random() * 80}%`,
@@ -93,7 +93,7 @@ export default function MusicPlayer() {
         {/* info */}
         <div className="mp-info text-center">
           <p className="mp-title font-display text-2xl font-semibold text-[#e8f4ff] mb-1 tracking-[0.14em]">OBSESSED</p>
-          <p className="mp-artist font-heading text-xs tracking-[0.14em] text-[rgba(202,230,160,0.55)] uppercase">Mariah Carey</p>
+          <p className="mp-artist font-heading text-xs tracking-[0.14em] text-[rgba(202,230,160,0.55)] uppercase">Send To My Love</p>
         </div>
 
         <div className="mp-divider w-full h-px bg-gradient-to-r from-transparent via-[rgba(0,200,255,0.12)] to-transparent" />
@@ -141,7 +141,7 @@ export default function MusicPlayer() {
         </div>
       </div>
 
-      <audio ref={audioRef} src={song} />
+      <audio ref={audioRef} src={song1} />
     </>
   );
 }
