@@ -1,6 +1,7 @@
 import ProfileCard from "../ui/ProfileCard";
 import img6 from "../image/foto6.jpeg";
 import img5 from '../image/fotoabout.jpeg';
+import img7 from '../image/gambarabout.jpeg';
 import MusicPlayer from "./music";
 
 const AboutSection = () => {
@@ -38,7 +39,7 @@ const AboutSection = () => {
           handle="javicodes"
           status="Online"
           contactText="Contact Me"
-          avatarUrl={img5}
+          avatarUrl={img6}
           showUserInfo={false}
           enableTilt={true}
           enableMobileTilt={false}

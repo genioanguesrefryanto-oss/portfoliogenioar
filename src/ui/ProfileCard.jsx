@@ -560,7 +560,7 @@ const ProfileCardComponent = ({
                 pointerEvents: 'none'
               }}
             >
-              <div className="w-full absolute flex flex-col top-[3em] gap-3">
+              <div className="w-full absolute flex flex-col top-[3em] gap-3 profile-card-name-title max-lg:hidden">
                 <h3
                   className="font-semibold m-0 text-shadow-lg text-shadow-black"
                   style={{
