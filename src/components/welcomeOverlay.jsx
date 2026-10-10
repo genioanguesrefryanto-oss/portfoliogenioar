@@ -39,11 +39,22 @@ const WelcomeOverlay = () => {
     document.body.style.overflow = "hidden";
     lettersRef.current = lettersRef.current.slice(0, letters.length);
 
+    const unlockScroll = () => {
+      document.body.style.overflow = "";
+    };
+
+    const safetyTimer = setTimeout(() => {
+      unlockScroll();
+      if (overlayRef.current) overlayRef.current.style.display = "none";
+      setShow(false);
+    }, 15000);
+
     const counter = { val: 0 };
     const tl = gsap.timeline({
       defaults: { ease: "power3.out" },
       onComplete: () => {
-        document.body.style.overflow = "";
+        clearTimeout(safetyTimer);
+        unlockScroll();
         setTimeout(() => setShow(false), 50);
       },
     });
@@ -120,6 +131,11 @@ const WelcomeOverlay = () => {
         "exit"
       )
       .set(overlayRef.current, { display: "none" });
+
+    return () => {
+      clearTimeout(safetyTimer);
+      unlockScroll();
+    };
   }, [show, letters.length]);
 
   if (!show) return null;
