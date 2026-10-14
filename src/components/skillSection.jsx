@@ -61,19 +61,20 @@ const SkillSection = () => {
           aos="fade-up"
         />
       </div>
-      {categories.map((cat) => {
+      {categories.map((cat, catIdx) => {
         return (
-          <div> 
-            <div data-aos="fade-up" data-aos-duration={1000 + 100 * cat}>
+          <div key={cat.label}> 
+            <div data-aos="fade-up" data-aos-duration={1000 + 100 * catIdx}>
             <SectionLine text={cat.label} />
             </div>
             <br />
             <div className="skills-grid flex flex-wrap gap-[0.6rem] justify-center">
-              {cat.items.map((item) => {
+              {cat.items.map((item, itemIdx) => {
                 return (
                   <div
+                    key={item.nama}
                     data-aos="zoom-in-up"
-                    data-aos-duration={800 + 100 * item}
+                    data-aos-duration={800 + 100 * (itemIdx + catIdx)}
                   >
                     <SkillsCard
                       language={item.nama}

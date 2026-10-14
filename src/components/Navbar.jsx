@@ -75,7 +75,7 @@ export function SiteNavbar({ className }) {
       </div>
 
       <div
-        className={`navbar-mobile fixed inset-0 z-50 flex flex-col bg-itam backdrop-blur-2xl opacity-0 pointer-events-none transition-opacity duration-500 lg:hidden ${openMenu ? "opacity-100 pointer-events-auto" : ""}`}
+        className={`navbar-mobile fixed inset-0 z-50 flex flex-col bg-itam backdrop-blur-2xl transition-opacity duration-500 lg:hidden ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
         aria-modal="true"
         role="dialog"
         aria-label="Navigasi mobile"

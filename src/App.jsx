@@ -19,7 +19,7 @@ function App() {
     <div>
       <div className="fixed inset-0 z-[3] h-full w-full pointer-events-none">
         <Particles
-          particleColors={["#072dd3"]}
+          particleColors={["#ffd24d"]}
           particleCount={150}
           particleSpread={15}
           speed={0.1}

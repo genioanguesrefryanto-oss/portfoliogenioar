@@ -43,9 +43,10 @@ const AboutSection = () => {
           showUserInfo={false}
           enableTilt={true}
           enableMobileTilt={false}
-          behindGlowColor="rgba(125, 190, 255, 0.67)"
+          behindGlowColor="rgba(255,210,77,0.85)"
           behindGlowEnabled
-          innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+          behindGlowSize="62%"
+          innerGradient="linear-gradient(145deg,rgba(201,151,28,0.55) 0%,rgba(255,210,77,0.27) 100%)"
         />
       </div>
     </div>

@@ -169,7 +169,7 @@ const WelcomeOverlay = () => {
             FRONTEND DEVELOPER
           </p>
 
-          <h1 className="welcome-name flex justify-center font-display text-[clamp(3rem,10vw,6rem)] tracking-[0.4rem] text-putih [text-shadow:0_0_40px_rgba(59,130,246,0.35)]">
+          <h1 className="welcome-name flex justify-center font-display text-[clamp(3rem,10vw,6rem)] tracking-[0.4rem] text-putih [text-shadow:0_0_40px_rgba(255,210,77,0.35)]">
             {letters.map((l, i) => (
               <span
                 key={i}

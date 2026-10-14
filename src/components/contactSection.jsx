@@ -8,7 +8,7 @@ const sapa = [
     {
         label: 'Say Hello',
         icon: 'ti ti-mail',
-        link: 'mailto:genioanguesrefryanto@gmail.com'
+        link: 'mailto:                          genioanguesrefryanto@gmail.com'
     },
     {
         label: 'View Resume',
@@ -64,10 +64,10 @@ const ContactSection = () => {
                   </a>
               ))}
           </div>
-          <div className="v-line w-40 h-[0.2rem] mx-auto rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.4),rgba(29,107,162,0.01))]" data-aos="fade" data-aos-duration="1000"></div>
+          <div className="v-line w-40 h-[0.2rem] mx-auto rounded-full bg-[radial-gradient(circle,rgba(255,210,77,0.4),rgba(201,151,28,0.01))]" data-aos="fade" data-aos-duration="1000"></div>
           <div className="social-btn flex justify-center gap-4 mt-20 max-md:flex-wrap max-md:gap-3 max-md:mt-12">
               {media.map((m) => (
-                  <a href={m.link} data-aos="fade-up" data-aos-duration="1000">
+                  <a href={m.link} key={m.label} data-aos="fade-up" data-aos-duration="1000">
                       <SocialCard social={m.label} link={m.icon} className="border-grey/20 text-[#999999] px-[1.1rem] py-[0.7rem] hover:border-dark-gold hover:text-gold" />
                   </a>
               ))}

@@ -35,7 +35,7 @@ const ProjectCard = () => {
     <div>
       {projects.map((cat, index) => (
         <a href={cat.link} key={index} className="block">
-        <div className="project-card group w-full flex justify-between gap-8 rounded-[20px] border-b border-[#282828] bg-transparent p-12 text-white transition duration-300 hover:bg-[rgba(0,213,255,0.01)] max-md:flex-col max-md:gap-6 max-md:p-6" data-aos="zoom-in-up" data-aos-duration='1000'>
+        <div className="project-card group w-full flex justify-between gap-8 rounded-[20px] border-b border-[#282828] bg-transparent p-12 text-white transition duration-300 hover:bg-[rgba(255,210,77,0.01)] max-md:flex-col max-md:gap-6 max-md:p-6" data-aos="zoom-in-up" data-aos-duration='1000'>
           <div className="project-kiri flex items-center gap-8 max-md:flex-col max-md:items-start max-md:gap-3">
             <div className="label text-white/10 text-[1.7rem] transition duration-300 group-hover:text-gold max-[480px]:hidden">{String(index + 1).padStart(2, "0")}</div>
             <div className="judul grid gap-4">
